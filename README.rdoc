@@ -1,28 +1,19 @@
-== README
+# Gating 
+------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gating is a feature we are introducing to show action for contests. If a gate is on for a contest, user has to pass the gating first before performing action. 
+The gate offer a question based on the type of gate. When user enters correct answer, user is allowed to see the contest. The answer is remembered for the user, so
+she does not have to enter the same question again.   
 
-Things you may want to cover:
+Contest has three types of gates - NDA, State, and Age.  
 
-* Ruby version
+### NDA
+Accept displayed non disclosure aggreement  
 
-* System dependencies
+### State
+User selects state of residence. Only residents of states - IL, CA, WA are allowed to see the contest
 
-* Configuration
+### Age
+Users above 18 years are allowed to see the content   
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Contest could have multiple states. Failing any of the gates takes them back to contest#index.  
